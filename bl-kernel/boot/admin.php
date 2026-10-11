@@ -16,7 +16,7 @@ $layout = array(
 	'slug'=>null,
 	'plugin'=>false,
 	'parameters'=>null,
-	'title'=>'Bludit'
+	'title'=>'Volkan Özdemir Yazılım'
 );
 
 // Get the Controller
