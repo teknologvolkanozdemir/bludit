@@ -3,9 +3,9 @@
 
 	<li class="nav-item mb-4" style="display: flex; align-items: center;">
 		<div style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--text-primary); border-radius: 8px; box-shadow: var(--shadow-sm); flex-shrink: 0;">
-			<img src="<?php echo HTML_PATH_CORE_IMG ?>logo.svg" width="18" height="18" alt="bludit-logo" style="filter: brightness(0) invert(1);">
+			<img src="<?php echo HTML_PATH_CORE_IMG ?>logo.svg" width="18" height="18" alt="Volkan Özdemir Yazılım" style="filter: brightness(0) invert(1);">
 		</div>
-		<span style="margin-left: 10px; font-weight: 600; font-size: 1rem; color: var(--text-primary); line-height: 1;"><?php echo (defined('BLUDIT_PRO'))?'BLUDIT PRO':'BLUDIT' ?></span>
+		<span style="margin-left: 10px; font-weight: 600; font-size: 1rem; color: var(--text-primary); line-height: 1;">Volkan Özdemir Yazılım</span>
 	</li>
 
 	<li class="nav-item">
@@ -78,9 +78,7 @@
 		<a class="nav-link" href="<?php echo HTML_PATH_ADMIN_ROOT.'logout' ?>"><span class="fa fa-arrow-circle-right"></span><?php $L->p('Logout') ?></a>
 	</li>
 
-	<?php if (!defined('BLUDIT_PRO')): ?>
 	<li class="nav-item mt-4">
-		<a class="nav-link sidebar-pro-link" target="_blank" href="https://pro.bludit.com"><?php $L->p('Upgrade to Bludit PRO') ?></a>
+		<a class="nav-link sidebar-pro-link" target="_blank" rel="noopener" href="https://www.volkan-ozdemir.com.tr">Volkan Özdemir Yazılım hizmetleri</a>
 	</li>
-	<?php endif; ?>
 </ul>

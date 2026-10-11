@@ -31,7 +31,7 @@ if ($modulesRequiredExit) {
 	echo 'PHP modules missing:';
 	echo $modulesRequiredMissing;
 	echo '';
-	echo '<a href="https://docs.bludit.com/en/getting-started/requirements">Please read Bludit requirements</a>.';
+	echo '<a href="https://www.volkan-ozdemir.com.tr">Please contact Volkan Özdemir Yazılım</a>.';
 	exit(0);
 }
 
@@ -368,9 +368,9 @@ function install($adminPassword, $timezone)
 		$siteUrl = PROTOCOL . DOMAIN . HTML_PATH_ROOT;
 	}
 	$data = array(
-		'title' => 'BLUDIT',
-		'slogan' => $L->get('welcome-to-bludit'),
-		'description' => $L->get('congratulations-you-have-successfully-installed-your-bludit'),
+		'title' => 'Volkan Özdemir Yazılım',
+		'slogan' => 'Yazılım hizmetleri',
+		'description' => 'Volkan Özdemir Yazılım hizmetleri.',
 		'footer' => 'Copyright © ' . Date::current('Y'),
 		'itemsPerPage' => 6,
 		'language' => $L->currentLanguage(),
@@ -388,10 +388,10 @@ function install($adminPassword, $timezone)
 		'emailFrom' => 'no-reply@' . DOMAIN,
 		'orderBy' => 'date',
 		'currentBuild' => '0',
-		'twitter' => 'https://twitter.com/bludit',
-		'facebook' => 'https://www.facebook.com/bluditcms',
+		'twitter' => '',
+		'facebook' => '',
 		'codepen' => '',
-		'github' => 'https://github.com/bludit',
+		'github' => '',
 		'instagram' => '',
 		'gitlab' => '',
 		'linkedin' => '',
@@ -577,7 +577,7 @@ function redirect($url)
 // ============================================================================
 
 if (alreadyInstalled()) {
-	$errorText = 'Bludit is already installed ;)';
+	$errorText = 'The software is already installed.';
 	error_log('[ERROR] ' . $errorText, 0);
 	exit($errorText);
 }
@@ -604,7 +604,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <head>
-	<title><?php echo $L->get('Bludit Installer') ?></title>
+	<title>Volkan Özdemir Yazılım - Setup</title>
 	<meta charset="<?php echo CHARSET ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex,nofollow">
@@ -854,9 +854,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<div class="installer-card">
 			<div class="installer-logo">
 				<div class="logo-icon">
-					<img src="bl-kernel/admin/themes/booty/logo.svg" alt="Bludit">
+					<img src="bl-kernel/admin/themes/booty/logo.svg" alt="Volkan Özdemir Yazılım">
 				</div>
-				<h1><?php echo $L->get('Bludit Installer') ?></h1>
+				<h1>Volkan Özdemir Yazılım</h1>
 			</div>
 
 			<?php

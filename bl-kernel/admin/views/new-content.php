@@ -313,7 +313,7 @@ echo Bootstrap::formInputHidden(array(
 				'name' => 'slug',
 				'tip' => $L->g('URL associated with the content'),
 				'label' => $L->g('Friendly URL'),
-				'placeholder' => $L->g('Leave empty for autocomplete by Bludit.')
+				'placeholder' => $L->g('Leave empty for automatic completion.')
 			));
 
 			// Robots

@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Bludit">
+<meta name="generator" content="Volkan Özdemir Yazılım">
 
 <!-- Dynamic title tag -->
 <?php echo Theme::metaTags('title'); ?>

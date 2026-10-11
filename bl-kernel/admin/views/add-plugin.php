@@ -57,7 +57,7 @@ if ($pluginsDirectory === false) {
 if (empty($pluginsDirectory)) {
 	echo Bootstrap::alert(array(
 		'class' => 'alert-secondary',
-		'text' => $L->g('There are no plugins available for this version of Bludit')
+		'text' => 'There are no plugins available for this software version.'
 	));
 	return;
 }

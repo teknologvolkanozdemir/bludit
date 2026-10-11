@@ -8,28 +8,28 @@ echo '
 ';
 
 echo '<tr>';
-echo '<td>Bludit Edition</td>';
+echo '<td>Software edition</td>';
 if (defined('BLUDIT_PRO')) {
-	echo '<td>PRO - '.$L->g('Thanks for supporting Bludit').' <span class="fa fa-heart" style="color: #ffc107"></span></td>';
+	echo '<td>Professional edition</td>';
 } elseif (defined('BLUDIT_PRO_LICENSE_INVALID')) {
-	echo '<td>Standard - '.sprintf($L->g('The Bludit PRO license is not valid for this version'), Sanitize::html(BLUDIT_PRO_LICENSE_INVALID), Sanitize::html(BLUDIT_VERSION)).'</td>';
+	echo '<td>Standard edition</td>';
 } else {
-	echo '<td>Standard - <a target="_blank" href="https://pro.bludit.com">'.$L->g('Upgrade to Bludit PRO').'</a></td>';
+	echo '<td>Standard edition</td>';
 }
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Version</td>';
+echo '<td>Software version</td>';
 echo '<td>'.BLUDIT_VERSION.'</td>';
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Codename</td>';
+echo '<td>Release codename</td>';
 echo '<td>'.BLUDIT_CODENAME.'</td>';
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Build Number</td>';
+echo '<td>Build number</td>';
 echo '<td>'.BLUDIT_BUILD.'</td>';
 echo '</tr>';
 
@@ -39,7 +39,7 @@ echo '<td>'.Filesystem::bytesToHumanFileSize(Filesystem::getSize(PATH_ROOT)).'</
 echo '</tr>';
 
 echo '<tr>';
-echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">Bludit Developers</a></td>';
+echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">System information</a></td>';
 echo '<td></td>';
 echo '</tr>';
 

@@ -42,7 +42,7 @@ class pluginVersion extends Plugin
 			$html = '<a id="current-version" class="current-version nav-link" href="' . HTML_PATH_ADMIN_ROOT . 'about' . '">' . $L->get('Version') . ' ' . (defined('BLUDIT_PRO') ? '<span class="bi-heart" style="color: #ffc107"></span>' : '') . '<span class="badge bg-warning rounded-pill">' . BLUDIT_VERSION . '</span></a>';
 		}
 		if ($this->getValue('newVersionAlert')) {
-			$html .= '<a id="new-version" class="new-version" style="display: none;" target="_blank" href="https://www.bludit.com">' . $L->get('New version available') . ' <i class="fa fa-bell text-danger"></i></a>';
+			$html .= '<a id="new-version" class="new-version" style="display: none;" target="_blank" rel="noopener" href="https://www.volkan-ozdemir.com.tr">' . $L->get('New version available') . ' <i class="fa fa-bell text-danger"></i></a>';
 		}
 		return $html;
 	}
