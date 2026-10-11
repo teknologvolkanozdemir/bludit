@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="generator" content="Bludit">
+	<meta name="generator" content="Volkan Özdemir Yazılım">
 	<meta name="theme-color" content="#1d1d1f">
 
 	<!-- Dynamic title tag -->
