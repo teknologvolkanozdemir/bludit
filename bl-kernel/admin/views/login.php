@@ -13,7 +13,7 @@ echo '
 	<div class="' . $logoClass . '">
 		<img src="' . $logoPath . '" alt="Logo">
 	</div>
-	<h1>' . (defined('BLUDIT_PRO') ? Sanitize::html($site->title()) : 'BLUDIT') . '</h1>
+	<h1>' . Sanitize::html($site->title() ?: 'Volkan Özdemir Yazılım') . '</h1>
 </div>
 ';
 
@@ -91,10 +91,8 @@ echo '
 echo '</form>';
 
 // Footer
-if (!defined('BLUDIT_PRO')) {
-	echo '
-	<div class="login-footer">
-		<p>Powered by <a href="https://www.bludit.com" target="_blank" rel="noopener">Bludit</a></p>
-	</div>
-	';
-}
+echo '
+<div class="login-footer">
+	<p><a href="https://www.volkan-ozdemir.com.tr" target="_blank" rel="noopener">Volkan Özdemir Yazılım hizmetleri</a></p>
+</div>
+';

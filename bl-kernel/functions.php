@@ -663,6 +663,16 @@ function editSettings($args)
   global $L;
   global $pages;
 
+  if (isset($args['adminTheme'])) {
+    if (!is_string($args['adminTheme']) || !preg_match('/^[a-zA-Z0-9_-]+$/', $args['adminTheme'])) {
+      return false;
+    }
+    $adminThemePath = PATH_ADMIN_THEMES . $args['adminTheme'] . DS;
+    if (!is_dir($adminThemePath) || !is_file($adminThemePath . 'index.php') || !is_file($adminThemePath . 'login.php')) {
+      return false;
+    }
+  }
+
   if (isset($args['language'])) {
     if ($args['language'] != $site->language()) {
       $tmp = new dbJSON(PATH_LANGUAGES . $args['language'] . '.json', false);

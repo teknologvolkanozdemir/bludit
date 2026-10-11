@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-uppercase d-block d-lg-none">
 	<div class="container">
 		<span class="navbar-brand">
-			<?php echo (defined('BLUDIT_PRO'))?'BLUDIT PRO':'BLUDIT' ?></span>
+			Volkan Özdemir Yazılım</span>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
 		 aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

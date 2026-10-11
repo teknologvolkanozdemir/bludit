@@ -74,6 +74,22 @@ echo Bootstrap::formInputHidden(array(
 		'placeholder' => '',
 		'tip' => $L->g('you-can-add-a-small-text-on-the-bottom')
 	));
+
+	$adminThemes = array();
+	foreach (Filesystem::listDirectories(PATH_ADMIN_THEMES) as $adminThemePath) {
+		$adminTheme = basename($adminThemePath);
+		if (is_file($adminThemePath . DS . 'index.php') && is_file($adminThemePath . DS . 'login.php')) {
+			$adminThemes[$adminTheme] = $adminTheme;
+		}
+	}
+	echo Bootstrap::formSelect(array(
+		'name' => 'adminTheme',
+		'label' => 'Admin panel theme',
+		'options' => $adminThemes,
+		'selected' => $site->adminTheme(),
+		'class' => '',
+		'tip' => 'Select an installed admin panel theme.'
+	));
 	?>
 </div>
 
@@ -643,28 +659,28 @@ echo Bootstrap::formInputHidden(array(
 	';
 
 	echo '<tr>';
-	echo '<td>Bludit Edition</td>';
+	echo '<td>Software edition</td>';
 	if (defined('BLUDIT_PRO')) {
-		echo '<td>PRO - '.$L->g('Thanks for supporting Bludit').' <span class="fa fa-heart" style="color: #ffc107"></span></td>';
+		echo '<td>Professional edition</td>';
 	} elseif (defined('BLUDIT_PRO_LICENSE_INVALID')) {
-		echo '<td>Standard - '.sprintf($L->g('The Bludit PRO license is not valid for this version'), Sanitize::html(BLUDIT_PRO_LICENSE_INVALID), Sanitize::html(BLUDIT_VERSION)).'</td>';
+		echo '<td>Standard edition</td>';
 	} else {
-		echo '<td>Standard - <a target="_blank" href="https://pro.bludit.com">'.$L->g('Upgrade to Bludit PRO').'</a></td>';
+		echo '<td>Standard edition</td>';
 	}
 	echo '</tr>';
 
 	echo '<tr>';
-	echo '<td>Bludit Version</td>';
+	echo '<td>Software version</td>';
 	echo '<td>'.BLUDIT_VERSION.'</td>';
 	echo '</tr>';
 
 	echo '<tr>';
-	echo '<td>Bludit Codename</td>';
+	echo '<td>Release codename</td>';
 	echo '<td>'.BLUDIT_CODENAME.'</td>';
 	echo '</tr>';
 
 	echo '<tr>';
-	echo '<td>Bludit Build Number</td>';
+	echo '<td>Build number</td>';
 	echo '<td>'.BLUDIT_BUILD.'</td>';
 	echo '</tr>';
 
@@ -674,7 +690,7 @@ echo Bootstrap::formInputHidden(array(
 	echo '</tr>';
 
 	echo '<tr>';
-	echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">Bludit Developers</a></td>';
+	echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">System information</a></td>';
 	echo '<td></td>';
 	echo '</tr>';
 
