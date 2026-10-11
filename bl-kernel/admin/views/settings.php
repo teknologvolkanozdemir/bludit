@@ -84,11 +84,11 @@ echo Bootstrap::formInputHidden(array(
 	}
 	echo Bootstrap::formSelect(array(
 		'name' => 'adminTheme',
-		'label' => 'Admin panel theme',
+		'label' => $L->g('admin-panel-theme'),
 		'options' => $adminThemes,
 		'selected' => $site->adminTheme(),
 		'class' => '',
-		'tip' => 'Select an installed admin panel theme.'
+		'tip' => $L->g('select-an-installed-admin-panel-theme')
 	));
 	?>
 </div>

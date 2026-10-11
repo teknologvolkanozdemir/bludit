@@ -74,6 +74,8 @@
     "categories": "Categories",
     "users": "Users",
     "settings": "Settings",
+    "admin-panel-theme": "Admin panel theme",
+    "select-an-installed-admin-panel-theme": "Select an installed admin panel theme.",
     "general": "General",
     "advanced": "Advanced",
     "new-content": "New content",

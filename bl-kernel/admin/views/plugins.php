@@ -15,9 +15,8 @@ echo Bootstrap::link(array(
 	'class' => 'ms-3'
 ));
 
-// There is a license of Bludit PRO but for another version
 if (defined('BLUDIT_PRO_LICENSE_INVALID')) {
-	echo '<div class="alert alert-warning mt-3">' . sprintf($L->g('The Bludit PRO license is not valid for this version'), Sanitize::html(BLUDIT_PRO_LICENSE_INVALID), Sanitize::html(BLUDIT_VERSION)) . '</div>';
+	echo '<div class="alert alert-warning mt-3">The installed license is not valid for this software version.</div>';
 }
 
 // Cached list of plugins from the directory, it's used to know if there is a
@@ -134,7 +133,7 @@ foreach ($pluginsInstalled as $plugin) {
 	if ($newVersion !== false) {
 		echo ' <span class="badge rounded-pill text-bg-success" title="' . $L->g('There is a new version available') . '">' . Sanitize::html($newVersion['version']) . '</span>';
 	} elseif (!$plugin->isCompatible()) {
-		echo ' <span class="badge rounded-pill text-bg-warning" title="' . $L->g('This plugin may not be supported by this version of Bludit') . '">' . $L->g('Update') . '</span>';
+		echo ' <span class="badge rounded-pill text-bg-warning" title="This plugin may not be supported by this software version.">' . $L->g('Update') . '</span>';
 	}
 	echo '</td>';
 
@@ -167,9 +166,9 @@ foreach ($pluginsNotInstalled as $plugin) {
 	}
 	echo '<tr id="' . $plugin->className() . '" class="searchItem">';
 
-	// A locked plugin is part of Bludit PRO and there is no valid license
+	// A locked plugin requires a valid license
 	if ($plugin->locked()) {
-		$activate = '<a class="me-3" target="_blank" href="https://pro.bludit.com"><span class="fa fa-lock"></span> ' . $L->g('Requires Bludit PRO') . '</a>';
+		$activate = '<a class="me-3" target="_blank" rel="noopener" href="https://www.volkan-ozdemir.com.tr"><span class="fa fa-lock"></span> Volkan Özdemir Yazılım hizmetleri</a>';
 	} else {
 		$activate = '<a class="me-3" href="' . HTML_PATH_ADMIN_ROOT . 'install-plugin/' . $plugin->className() . '">' . $L->g('Activate') . '</a>';
 	}

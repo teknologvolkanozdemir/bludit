@@ -577,7 +577,7 @@ function redirect($url)
 // ============================================================================
 
 if (alreadyInstalled()) {
-	$errorText = 'Bludit is already installed ;)';
+	$errorText = 'The software is already installed.';
 	error_log('[ERROR] ' . $errorText, 0);
 	exit($errorText);
 }

@@ -21,7 +21,7 @@
 
 	// Compatibility warning
 	if (!$plugin->isCompatible()) {
-		echo '<div class="alert alert-warning mt-2">' . $L->g('This plugin may not be supported by this version of Bludit') . '</div>';
+		echo '<div class="alert alert-warning mt-2">This plugin may not be supported by this software version.</div>';
 	}
 
 	// Print the plugin form
